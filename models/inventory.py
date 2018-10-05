@@ -57,7 +57,7 @@ class storyQuestion(models.Model):
 	_name = "story.question"
 
 	name = fields.Char(string="Name")
-	anwer_ids = fields.One2many("story.answer", "question_id", string="Answer(s)")
+	answer_ids = fields.One2many("story.answer", "question_id", string="Answer(s)")
 	is_open = fields.Boolean(string="Is open")
 	open_answer = fields.Char(string="Answer")
 

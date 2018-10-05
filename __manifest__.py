@@ -8,7 +8,7 @@
     'website': 'https://www.nubeo.be',
     'depends': [
         'base',
-        'contact',
+        'contacts',
         'website',
     ],
     'data': [
