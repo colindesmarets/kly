@@ -125,6 +125,7 @@
 						</group>
 						<group>
 							<field name="date"/>
+							<field name="code"/>
 						</group>
 					</group>
 				</form>
@@ -150,6 +151,7 @@
 				<form string="Chapter">
 					<group>
 						<field name="name"/>
+						<field name="sequence"/>
 						<field name="story_id"/>
 					</group>
 					<notebook>
@@ -165,6 +167,8 @@
 			<field name="model">story.chapter</field>
 			<field name="arch" type="xml">
 				<tree string="Chapter">
+					<field name="story_id"/>
+					<field name="sequence"/>
 					<field name="name"/>
 				</tree>
 			</field>
@@ -179,6 +183,7 @@
 						<group>
 							<field name="name"/>
 							<field name="chapter_id"/>
+							<field name="sequence"/>
 						</group>
 						<group>
 							<field name="has_question"/>
@@ -202,6 +207,7 @@
 					<field name="chapter_id"/>
 					<field name="has_question"/>
 					<field name="question_id"/>
+					<field name="sequence"/>
 				</tree>
 			</field>
 		</record>

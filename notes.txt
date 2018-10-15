@@ -15,7 +15,6 @@ PLAY
 ----Starting inventory----
 fancy pyjama with flamingos
 Canon EF-M 18-55mm f/3.5-5.6 IS STM
-Html tag printed in 3D
 
 
 NIGHT 1

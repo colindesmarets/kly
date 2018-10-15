@@ -34,19 +34,26 @@ class storySession(models.Model):
 	partner_id = fields.Many2one("res.partner", string="Partner")
 	story_id = fields.Many2one("story.story", string="Story")
 	date = fields.Date(string="Date")
+	code = fields.Char(string="Code")
+	chapter = fields.Integer(string="Chapter", default=1)
+	event = fields.Integer(string="Event", default=1)
 
 class storyChapter(models.Model):
 	_name = "story.chapter"
+	_order = "story_id, sequence"
 
 	name = fields.Char(string="Name")
 	event_ids = fields.One2many("story.event", "chapter_id", string="Events")
 	story_id = fields.Many2one("story.story", string="Story")
+	sequence = fields.Integer(string="Order")
 
 class storyEvent(models.Model):
 	_name = "story.event"
+	_order = "chapter_id, sequence"
 
 	name = fields.Char(string="Name")
 	chapter_id = fields.Many2one("story.chapter", string="Chapter")
+	sequence = fields.Integer(string="Order")
 
 	text = fields.Text(string="Text")
 

@@ -8,13 +8,16 @@
     'website': 'https://www.nubeo.be',
     'depends': [
         'base',
+        'web',
         'contacts',
         'website',
     ],
     'data': [
+        'security/ir.model.access.csv',
         'datas/menus.xml',
         'views/inventory_views.xml',
         'views/templates.xml',
+        'views/assets.xml',
     ],
     'qweb': [
     ],  
